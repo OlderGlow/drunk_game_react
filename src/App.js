@@ -10,7 +10,7 @@ import {useState} from 'react';
 import ReactGA from 'react-ga'
 
 function initializeStats() {
-    ReactGA.initialize('G-E6S0JDH2G5');
+    ReactGA.initialize('G-VV7BCGQM5L');
     ReactGA.pageview(window.location.pathname);
 }
 
