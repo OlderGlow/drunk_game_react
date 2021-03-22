@@ -7,6 +7,10 @@ import ClassicGame from "./pages/ClassicGame";
 import HotGame from "./pages/HotGame";
 import RandomGame from "./pages/RandomGame";
 import {useState} from 'react';
+import ReactGA from 'react-ga';
+
+const TRACKING_ID = "G-VV7BCGQM5L";
+ReactGA.initialize(TRACKING_ID);
 
 export default function App() {
 
