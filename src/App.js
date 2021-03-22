@@ -7,7 +7,7 @@ import ClassicGame from "./pages/ClassicGame";
 import HotGame from "./pages/HotGame";
 import RandomGame from "./pages/RandomGame";
 import {useEffect, useState} from 'react';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga'
 
 export default function App() {
 
