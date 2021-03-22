@@ -14,10 +14,8 @@ export default function App() {
     const [listOfPlayer,
         setlistOfPlayer] = useState([]);
 
-    const TRACKING_ID = "G-VV7BCGQM5L";
-
     useEffect(() => {
-        ReactGA.initialize(TRACKING_ID);
+        ReactGA.initialize('G-VV7BCGQM5L');
         ReactGA.pageview(window.location.pathname);
     }, [])
 
