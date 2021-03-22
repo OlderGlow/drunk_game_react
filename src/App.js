@@ -6,21 +6,24 @@ import {AnimatePresence} from "framer-motion";
 import ClassicGame from "./pages/ClassicGame";
 import HotGame from "./pages/HotGame";
 import RandomGame from "./pages/RandomGame";
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import ReactGA from 'react-ga'
-
-function initializeStats() {
-    ReactGA.initialize('G-VV7BCGQM5L');
-    ReactGA.pageview(window.location.pathname);
-}
 
 export default function App() {
 
+    useEffect(() => {
+        
+    ReactGA.initialize('G-BJFJZE21R7');
+    ReactGA.pageview(window.location.pathname);
+
+    }, [])
+
     const [listOfPlayer,
         setlistOfPlayer] = useState([]);
-
+    
+    /* eslint-disable-next-line */
     document.oncontextmenu = new Function("return false");
-    initializeStats()
+
     return (
         <div className="app">
             <AnimatePresence>
