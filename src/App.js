@@ -17,6 +17,7 @@ export default function App() {
 
     const TRACKING_ID = "G-VV7BCGQM5L";
     ReactGA.initialize(TRACKING_ID);
+    ReactGA.pageview(window.location.pathname + window.location.search);
 
     document.oncontextmenu = new Function("return false");
 
