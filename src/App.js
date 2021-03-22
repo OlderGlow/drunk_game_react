@@ -6,9 +6,8 @@ import {AnimatePresence} from "framer-motion";
 import ClassicGame from "./pages/ClassicGame";
 import HotGame from "./pages/HotGame";
 import RandomGame from "./pages/RandomGame";
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import ReactGA from 'react-ga';
-
 
 export default function App() {
 
@@ -16,8 +15,11 @@ export default function App() {
         setlistOfPlayer] = useState([]);
 
     const TRACKING_ID = "G-VV7BCGQM5L";
-    ReactGA.initialize(TRACKING_ID);
-    ReactGA.pageview(window.location.pathname + window.location.search);
+
+    useEffect(() => {
+        ReactGA.initialize(TRACKING_ID);
+        ReactGA.pageview(window.location.pathname);
+    }, [])
 
     document.oncontextmenu = new Function("return false");
 
