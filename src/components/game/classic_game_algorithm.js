@@ -39,7 +39,6 @@ function switchPhrase(Player, Probability, ArrayData, data) {
         const has = ArrayData[random].replace('j1', Player[0]).replace('j2', Player[1]);
         ArrayData.splice(random, 1)
         arrayProb.splice(Probability, 1)
-        console.log(ArrayData)
         return has;
     } else {
         ArrayData = data.slice();
@@ -104,8 +103,12 @@ function rnd(players) {
 
 export function randomPlayer(players) {
     if (players) {
-        const p1 = players[rnd(players)];
-        const p2 = players[rnd(players)];
+        let p1 = players[rnd(players)];
+        let p2 = players[rnd(players)];
+        if(p1 === p2){
+            console.log(p1+p2)
+            p2 = players[rnd(players)]
+        }
         return [p1, p2];
     } else return null;
 }

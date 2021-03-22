@@ -8,23 +8,31 @@ import HotGame from "./pages/HotGame";
 import RandomGame from "./pages/RandomGame";
 import {useState} from 'react';
 
-
 export default function App() {
 
-    const [listOfPlayer, setlistOfPlayer] = useState(null);
+    const [listOfPlayer,
+        setlistOfPlayer] = useState([]);
+
+    document.oncontextmenu = new Function("return false");
 
     return (
         <div className="app">
             <AnimatePresence>
                 <Switch>
                     <Route path={'/'} component={Home} exact/>
-                    <Route path={'/pre-game'} component={() => <SettingsStartGame listOfPlayer={listOfPlayer} setListOfPlayer={setlistOfPlayer}/>}/>
-                    <Route path={'/classic-game'} component={() => <ClassicGame listOfPlayer={listOfPlayer}/>}/>
+                    <Route
+                        path={'/pre-game'}
+                        component={() => <SettingsStartGame
+                        listOfPlayer={listOfPlayer}
+                        setlistOfPlayer={setlistOfPlayer}/>}/>
+                    <Route
+                        path={'/classic-game'}
+                        component={() => <ClassicGame listOfPlayer={listOfPlayer}/>}/>
                     <Route path={'/hot-game'} component={HotGame}/>
                     <Route path={'/random-game'} component={RandomGame}/>
                 </Switch>
             </AnimatePresence>
         </div>
     );
-    
+
 }

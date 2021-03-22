@@ -1,75 +1,72 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import {motion} from "framer-motion";
 import Input from "../components/pre-game/Input";
 import Drunk from '../images/logo.png'
 import Card from "../components/pre-game/Card";
-import {Link} from "react-router-dom";
 
-class SettingsStartGame extends Component {
+function SettingsStartGame(props) {
 
+    const [player, setPlayer] = useState([])
+    const [etat, setEtat] = useState(false)
 
-    state = {};
-
-    setMode = mode => {
-        this.setState({
-            mode: mode
-        })
-    }
-
-    setPlayer = player => {
-        this.setState({
-            player: player
-        })
-    }
-
-    addPlayer(){
-        if(this.state.player){
-            let listOfPlayer = this.state.player.map(p => p.PlayerName)
-            this.props.setListOfPlayer(listOfPlayer)
+    function addPlayer(){
+        if(player){
+            let _p = player.map(p => p.PlayerName)
+            sessionStorage.setItem('players', JSON.stringify(_p))
         }
-        else{
-            alert('Il manque des joueurs')
-        }
+        setEtat(etat => !etat)
     }
 
-    render() {
         return (
-            <motion.div initial={{opacity: 0}} exit={{opacity: 0}} animate={{opacity: 1}}
-                        className="h-full bg-gradient-to-tr from-purple-500 to-purple-800">
+            <motion.div
+                initial={{
+                opacity: 0
+            }}
+                exit={{
+                opacity: 0
+            }}
+                animate={{
+                opacity: 1
+            }}
+                className="h-full bg-gradient-to-tr min-h-screen from-blue-400 to-indigo-800">
                 <div className="flex h-auto items-center justify-center">
-                    <div className="mt-6">
+                    <div className="mt-6 sm:mt-20">
                         <img src={Drunk} alt="Logo" className="h-20 w-30"/>
                     </div>
                 </div>
-                <div className="max-w-sm sm:max-w-full mx-auto sm:grid grid-cols-2 h-auto mt-16">
-                    <div className="flex flex-col items-center">
-                        <div className="overflow-auto mx-auto" style={{width: "fit-content"}}>
-                            <p className="text-2xl text-white font-semibold mb-4">Ajoutez jusqu'à 8 joueurs</p>
-                            <Input player={this.state.player} setPlayer={this.setPlayer}/>
+                <div
+                    className="max-w-sm sm:max-w-full mx-auto h-auto mt-16">
+                    {!etat ? <div className="flex flex-col items-center">
+                        <div
+                            className="mx-auto"
+                            style={{
+                            width: "fit-content"
+                        }}>
+                            <p className="text-2xl sm:text-3xl mb-24 text-white font-semibold text-center">Ajoutez des joueurs pour démarrer</p>
+                            <Input player={player} setPlayer={setPlayer} listOfPlayer={props.listOfPlayer} setListOfPlayer={props.setlistOfPlayer}/>
                         </div>
-                    </div>
-                    <div className="flex justify-center">
-                        <Card mode={this.state.mode} setMode={this.setMode}/>
-                    </div>
+                    </div> : ''}
+                    {etat ? <div className="flex justify-center items-center">
+                        <Card setListOfPlayer={props.setlistOfPlayer}/>
+                    </div> : ''}
                 </div>
-                <div className="flex flex-row w-full justify-center">
-                    <motion.button whileHover={{scale: 1.1}}
-                                   whileTap={{scale: 0.9}}
-                                   className="p-4 h-24 text-2xl mt-20 mb-20 bg-white text-blue-600 rounded-xl font-semibold">
-
-                        {this.state.mode === 1 &&
-                        <Link to={'/classic-game'} onClick={() => this.addPlayer()}>Commencer une partie « Classic Drunk »</Link>}
-                        {this.state.mode === 2 && <Link to={{
-                            pathname:'/hot-game'
-                            }}>Commencer une partie « Hot Drunk »</Link>}
-                        {this.state.mode === 3 && <Link to={'/random-game'}>Commencer une partie « ?! Drunk »</Link>}
-                        {this.state.mode === undefined && "Sélectionnez un mode de jeu"}
-                    </motion.button>
+                <div className="flex flex-row max-w-xs sm:max-w-xl mx-auto h-60 items-end justify-center">
+                    {player.length >= 2 ? <motion.button
+                        onClick={() => addPlayer()}
+                        whileHover={{
+                        scale: 1.1
+                    }}
+                        whileTap={{
+                        scale: 0.9
+                    }}
+                        className="p-4 text-2xl bg-white text-blue-600 rounded-xl font-semibold">
+                        {!etat ? "Allez vers un mode de jeu" : <span><svg className="w-6 h-6 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg> Liste des joueurs</span>} 
+                    </motion.button> : ''}
                 </div>
 
             </motion.div>
         );
-    }
+    
 }
 
 export default SettingsStartGame;
