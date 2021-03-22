@@ -35,7 +35,7 @@ function SettingsStartGame(props) {
                     </div>
                 </div>
                 <div
-                    className="max-w-sm sm:max-w-full mx-auto h-auto mt-16">
+                    className="max-w-xs sm:max-w-full w-full mx-auto h-auto mt-16">
                     {!etat ? <div className="flex flex-col items-center">
                         <div
                             className="mx-auto"
