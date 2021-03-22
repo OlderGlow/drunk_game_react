@@ -1,6 +1,6 @@
 {
-  "name": "untitled",
-  "version": "0.1.0",
+  "name": "drunkgame",
+  "version": "0.8.0",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.1",
