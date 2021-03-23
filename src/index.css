@@ -98,4 +98,24 @@ input:-webkit-autofill:hover {
         transition: 300ms ease all;
         left: 0;
     }
+
+    .title {
+        margin-top: 5rem;
+    }
+
+    .countbar {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        width: 100%;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .phrase {
+        margin-top: 5rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
 }

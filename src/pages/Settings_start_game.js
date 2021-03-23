@@ -50,7 +50,7 @@ function SettingsStartGame(props) {
                         <Card setListOfPlayer={props.setlistOfPlayer}/>
                     </div> : ''}
                 </div>
-                <div className="flex flex-row max-w-xs sm:max-w-xl mx-auto h-60 items-end justify-center">
+                <div className="flex flex-row max-w-xs sm:max-w-sm lg:max-w-lg md:max-w-md xl:max-w-xl w-full mx-auto h-60 items-end justify-center">
                     {player.length >= 2 ? <motion.button
                         onClick={() => addPlayer()}
                         whileHover={{
@@ -60,7 +60,7 @@ function SettingsStartGame(props) {
                         scale: 0.9
                     }}
                         className="p-4 text-2xl bg-white text-blue-600 rounded-xl font-semibold">
-                        {!etat ? "Allez vers un mode de jeu" : <span><svg className="w-6 h-6 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg> Liste des joueurs</span>} 
+                        {!etat ? "Sélectionner un mode de jeu" : <span><svg className="w-6 h-6 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg> Liste des joueurs</span>} 
                     </motion.button> : ''}
                 </div>
 

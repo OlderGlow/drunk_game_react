@@ -66,16 +66,16 @@ function ClassicGame({listOfPlayer}) {
             onClick={() => randomGame()}>
 
             <div
-                className="flex min-h-screen flex-col h-full items-center justify-center sm:overflow-x-hidden">
+                className="flex min-h-screen flex-col h-full sm:items-center sm:justify-center text-center">
 
-                <p className="text-7xl mb-9 text-white font-semibold">{Count <= NbTour
+                <p className="title text-7xl mb-9 text-white font-semibold">{Count <= NbTour
                         ? Title
                         : 'Fin du jeu'}</p>
                 <p
-                    className="text-5xl max-w-screen-lg text-center mb-9 text-white font-semibold">{Count <= NbTour
+                    className="phrase text-3xl max-w-screen-lg mb-9 text-white font-semibold">{Count <= NbTour
                         ? Phrase
                         : 'Souhaitez-vous relancer une partie ?'}</p>
-                <p className="text-2xl text-center mb-9 text-gray-300 font-semibold">{Count <= NbTour
+                <p className="gorgees text-2xl mx-auto mb-9 text-gray-300 font-semibold">{Count <= NbTour
                         ? Gorgees
                         : ''}</p>
 
@@ -90,7 +90,7 @@ function ClassicGame({listOfPlayer}) {
                         }}
                             onClick={() => setCount(0)}>Relancer maintenant</motion.button>
                     : ''}
-                <div className="relative pt-1 w-1/2">
+                <div className="countbar relative pt-1 w-1/2">
                     <div className="overflow-hidden h-2 mb-4 w-full text-xs flex rounded bg-white">
                         <motion.div
                             animate={{

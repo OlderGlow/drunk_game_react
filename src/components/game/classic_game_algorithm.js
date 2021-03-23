@@ -105,9 +105,10 @@ export function randomPlayer(players) {
     if (players) {
         let p1 = players[rnd(players)];
         let p2 = players[rnd(players)];
-        if(p1 === p2){
-            console.log(p1+p2)
-            p2 = players[rnd(players)]
+        while(p1 === p2){
+            console.log(p1, p2)
+            let r = Math.floor(Math.random() * players.length);
+            p2 = players[r]
         }
         return [p1, p2];
     } else return null;
