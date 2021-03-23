@@ -51,7 +51,7 @@ function switchPhrase(Player, Probability, ArrayData, data) {
 
 export function randomGorgees(Title) {
     const ri = getRandomInt(6)
-    if (Title !== 'Hasard') {
+    if (Title !== 'Hasard' || Title !== 'Jeu d\'équipe') {
         return;
     }
     if (ri === 1) {

@@ -8,7 +8,7 @@ function ClassicGame({listOfPlayer}) {
 
     const players = listOfPlayer;
     const [Player,
-        setPlayer] = useState(); 
+        setPlayer] = useState();
     const [Gorgees,
         setGorgees] = useState();
     const [Phrase,
@@ -71,8 +71,7 @@ function ClassicGame({listOfPlayer}) {
                 <p className="title text-7xl mb-9 text-white font-semibold">{Count <= NbTour
                         ? Title
                         : 'Fin du jeu'}</p>
-                <p
-                    className="phrase text-3xl max-w-screen-lg mb-9 text-white font-semibold">{Count <= NbTour
+                <p className="phrase text-3xl max-w-screen-lg mb-9 text-white font-semibold">{Count <= NbTour
                         ? Phrase
                         : 'Souhaitez-vous relancer une partie ?'}</p>
                 <p className="gorgees text-2xl mx-auto mb-9 text-gray-300 font-semibold">{Count <= NbTour

@@ -105,7 +105,6 @@ input:-webkit-autofill:hover {
 
     .countbar {
         display: flex;
-        align-items: flex-end;
         height: 100%;
         width: 100%;
         max-width: 320px;
@@ -117,5 +116,6 @@ input:-webkit-autofill:hover {
         margin-top: 5rem;
         margin-left: 3rem;
         margin-right: 3rem;
+        line-height: 2.3rem;
     }
 }

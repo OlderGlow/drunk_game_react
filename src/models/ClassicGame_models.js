@@ -12,7 +12,24 @@ export const question_cul_sec_solo =
             "j1 doit boire un cul sec d'eau, ça lui fera du bien", 
             "j1 doit finir son verre en regardant dans les yeux la personne à sa droite", 
             "j1 doit finir son verre. Il peut annuler ce cul sec contre être muet pendant 5 minutes", 
-            "j1 et j2 s'associent pour donner un cul sec à une personne"]
+            "j1 et j2 s'associent pour donner un cul sec à une personne",
+            "j1 : cite 3 musiques de Calvin Harris. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de The Weeknd. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de Eminem. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de Daft Punk. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de Gorillaz. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de Green Day. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de The Chainsmokers. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de David Guetta. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de Nekfeu. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de Pascal Obispo. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de Claude François. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de Amel Bent. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de Diam's. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de Fatal Bazooka. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de Julien Doré. Si tu te trompes ou tu échoues : CUL SEC",
+            "j1 : cite 3 musiques de PNL. Si tu te trompes ou tu échoues : CUL SEC",
+        ]
 export const hasard = 
         [
             'j1 : quelle est la superficie en km² du Japon ? (~40000)',
@@ -41,5 +58,5 @@ export const duo =
     ]
 export const jeuEquipe = 
     [
-        'Citez un pays ou une ville commençant par la lettre T. j1 commence'
+        'Citez un pays ou une ville commençant par la lettre T. j1 commence',
     ]
