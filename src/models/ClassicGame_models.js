@@ -1,4 +1,4 @@
-export const mode_name = ["Hasard","Donneur","Prenneur","Duo","Duel","Jeu d'équipe","Cul sec", "Cul sec - Groupe"]
+export const mode_name = ["Hasard","Donneur","Preneur","Duo","Duel","Jeu d'équipe","Cul sec", "Cul sec - Groupe"]
 
 export const question_cul_sec_groupe = 
         [
@@ -34,7 +34,7 @@ export const hasard =
         [
             'j1 : quelle est la superficie en km² du Japon ? (~40000)',
             "j1 : Vrai ou faux ? Cyprien possède plus de 14 millions d'abonnés sur Youtube", 
-            "j1 : Vrai ou faux ? La Tour Effeil a été construite au 17e siècle", 
+            "j1 : Vrai ou faux ? La Tour Eiffel a été construite au 17e siècle", 
             "j1 : Squeezie possède plus ou moins de 500 000 auditeurs/mois sur Spotify ?"
         ]
 export const donneur = 

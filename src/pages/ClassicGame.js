@@ -2,7 +2,7 @@
 import React, {useState, useEffect} from 'react';
 import {Redirect} from 'react-router-dom';
 import {motion} from 'framer-motion';
-import {randomMode, randomGorgees, randomPhrase, randomPlayer} from '../components/game/classic_game_algorithm'
+import {randomMode, randomGorgees, randomPhrase, randomPlayer, restartGame} from '../components/game/classic_game_algorithm'
 
 function ClassicGame({listOfPlayer}) {
 
@@ -87,7 +87,7 @@ function ClassicGame({listOfPlayer}) {
                             whileTap={{
                             scale: 0.9
                         }}
-                            onClick={() => setCount(0)}>Relancer maintenant</motion.button>
+                            onClick={() => restartGame(setCount(0))}>Relancer maintenant</motion.button>
                     : ''}
                 <div className="countbar relative pt-1 w-1/2">
                     <div className="overflow-hidden h-2 mb-4 w-full text-xs flex rounded bg-white">

@@ -51,7 +51,7 @@ function switchPhrase(Player, Probability, ArrayData, data) {
 
 export function randomGorgees(Title) {
     const ri = getRandomInt(6)
-    if (Title !== 'Hasard' || Title !== 'Jeu d\'équipe') {
+    if (Title !== ('Hasard' || 'Jeu d\'équipe')) {
         return;
     }
     if (ri === 1) {
@@ -62,6 +62,7 @@ export function randomGorgees(Title) {
 }
 
 export function randomPhrase(Title, Player) {
+    console.log(arrayProb)
     let div = document.getElementById('divgame')
     switch (Title) {
         default:
@@ -81,7 +82,7 @@ export function randomPhrase(Title, Player) {
             div.className = "h-full bg-gradient-to-br from-indigo-400 to-blue-800"
             return switchPhrase(Player, 1, newDonneur, donneur);
 
-        case 'Prenneur':
+        case 'Preneur':
             div.className = "h-full bg-gradient-to-br from-pink-400 to-pink-800"
             return switchPhrase(Player, 2, newPrenneur, prenneur);
         case 'Duel':
@@ -106,10 +107,16 @@ export function randomPlayer(players) {
         let p1 = players[rnd(players)];
         let p2 = players[rnd(players)];
         while(p1 === p2){
-            console.log(p1, p2)
             let r = Math.floor(Math.random() * players.length);
             p2 = players[r]
         }
         return [p1, p2];
     } else return null;
+}
+
+export function restartGame(setCount){
+    arrayProb.length = 0
+    arrayProb.push(6, 6, 6, 6, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 7, 7, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+    console.log(arrayProb)
+    return setCount
 }
