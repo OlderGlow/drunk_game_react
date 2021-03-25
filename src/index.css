@@ -90,6 +90,17 @@ input:-webkit-autofill:hover {
 
 /* Media Query - based on smartphone average width screen */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    .defaultFace span::before{
+        content: "";
+    }
+
+
+    .defaultFace{
+        display: flex;
+        height: 100%;
+    }
+   
     input {
         background: none;
         color: #ffffff;

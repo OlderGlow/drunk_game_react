@@ -142,7 +142,7 @@ export default function RandomGame({listOfPlayer}) {
                         : clique sur le dé pour commencer...
                         <div className="mt-24"><Dice
                             rollingTime={'1400'}
-                            size={'160'}
+                            size={'150'}
                             onRoll={(value) => afterRolling(value)}/></div>
                     </motion.div>
                 : ''}
