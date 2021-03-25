@@ -87,6 +87,7 @@ export default function Input(props) {
                                         initial="hkeyden"
                                         animate="visible"
                                         name="PlayerName"
+                                        autoFocus={true}
                                         value={inputList[i].PlayerName}
                                         variants={variants}
                                         autoComplete={"off"}
