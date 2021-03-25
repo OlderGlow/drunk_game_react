@@ -63,6 +63,31 @@ input:-webkit-autofill:hover {
     transition: background-color 5000s ease-in-out 0s;
 }
 
+.back-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    margin-left: auto;
+    width: 10vw;
+    margin-right: auto;
+    border-radius: 4rem;
+    font-weight: 600;
+    height: 100%;
+    color: #465ac2;
+}
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
 /* Media Query - based on smartphone average width screen */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     input {
@@ -117,5 +142,21 @@ input:-webkit-autofill:hover {
         margin-left: 3rem;
         margin-right: 3rem;
         line-height: 2.3rem;
+    }
+
+    .back-player {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #fff;
+        margin-left: auto;
+        width: 50vw;
+        margin-right: auto;
+        border-radius: 4rem;
+        font-weight: 600;
+        height: 100%;
+        color: #465ac2;
     }
 }

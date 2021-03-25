@@ -37,8 +37,8 @@ export default function App() {
                     <Route
                         path={'/classic-game'}
                         component={() => <ClassicGame listOfPlayer={listOfPlayer}/>}/>
-                    <Route path={'/hot-game'} component={HotGame}/>
-                    <Route path={'/random-game'} component={RandomGame}/>
+                    <Route path={'/hot-game'} component={() => <HotGame listOfPlayer={listOfPlayer}/>}/>
+                    <Route path={'/random-game'} component={() => <RandomGame listOfPlayer={listOfPlayer}/>}/>
                 </Switch>
             </AnimatePresence>
         </div>

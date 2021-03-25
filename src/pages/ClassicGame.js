@@ -29,6 +29,12 @@ function ClassicGame({listOfPlayer}) {
         }
     }
 
+    function backListGame() {
+        sessionStorage.setItem('end-game', true)
+        restartGame(setCount(0))
+        setRedirectTo(true)
+    }
+
     useEffect(() => {
         if (players.length >= 2) {
             setTitle(randomMode())
@@ -73,22 +79,11 @@ function ClassicGame({listOfPlayer}) {
                         : 'Fin du jeu'}</p>
                 <p className="phrase text-3xl max-w-screen-lg mb-9 text-white font-semibold">{Count <= NbTour
                         ? Phrase
-                        : 'Souhaitez-vous relancer une partie ?'}</p>
+                        : 'Souhaitez-vous rejouer ?'}</p>
                 <p className="gorgees text-2xl mx-auto mb-9 text-gray-300 font-semibold">{Count <= NbTour
                         ? Gorgees
                         : ''}</p>
 
-                {Count > NbTour
-                    ? <motion.button
-                            className="text-4xl text-center mb-9 bg-white rounded-xl p-3 font-semibold text-gray-600"
-                            whileHover={{
-                            scale: 1.1
-                        }}
-                            whileTap={{
-                            scale: 0.9
-                        }}
-                            onClick={() => restartGame(setCount(0))}>Relancer maintenant</motion.button>
-                    : ''}
                 <div className="countbar relative pt-1 w-1/2">
                     <div className="overflow-hidden h-2 mb-4 w-full text-xs flex rounded bg-white">
                         <motion.div
@@ -101,6 +96,30 @@ function ClassicGame({listOfPlayer}) {
                         }}
                             className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-400"></motion.div>
                     </div>
+                </div>
+                <div className="grid grid-cols-2 w-1/3">
+                    {Count > NbTour
+                        ? <motion.button
+                                className="text-3xl text-center mr-3 bg-white rounded-xl p-3 font-semibold text-gray-600"
+                                whileHover={{
+                                scale: 1.1
+                            }}
+                                whileTap={{
+                                scale: 0.9
+                            }}
+                                onClick={() => restartGame(setCount(0))}>Relancer une partie</motion.button>
+                        : ''}
+                    {Count > NbTour
+                        ? <motion.button
+                                className="text-3xl text-center bg-white rounded-xl p-3 font-semibold text-gray-600"
+                                whileHover={{
+                                scale: 1.1
+                            }}
+                                whileTap={{
+                                scale: 0.9
+                            }}
+                                onClick={() => backListGame()}>Retour aux modes de jeu</motion.button>
+                        : ''}
                 </div>
             </div>
 

@@ -62,7 +62,6 @@ export function randomGorgees(Title) {
 }
 
 export function randomPhrase(Title, Player) {
-    console.log(arrayProb)
     let div = document.getElementById('divgame')
     switch (Title) {
         default:
@@ -117,6 +116,5 @@ export function randomPlayer(players) {
 export function restartGame(setCount){
     arrayProb.length = 0
     arrayProb.push(6, 6, 6, 6, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 7, 7, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-    console.log(arrayProb)
     return setCount
 }
