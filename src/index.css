@@ -89,7 +89,7 @@ input:-webkit-autofill:hover {
 }
 
 ._space3d{
-    perspective: 0px !important;
+    perspective: none !important;
 }
 
 /* Media Query - based on smartphone average width screen */
