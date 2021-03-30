@@ -12,11 +12,11 @@ function SettingsStartGame(props) {
         setEtat] = useState(false)
     const [card,
         setCard] = useState(1)
-
     function addPlayer() {
+    console.log(player)
         if (player) {
             let _p = player.map(p => p.PlayerName)
-            localStorage.setItem('players', JSON.stringify(_p))
+            sessionStorage.setItem('players', JSON.stringify(_p))
         }
         setEtat(etat => !etat)
     }
