@@ -31,7 +31,6 @@ export default function RandomGame({listOfPlayer}) {
 
     function afterRolling(value) {
         setValue(value)
-        console.log(count)
         setTimeout(() => setDice(true), 800)
     }
 
@@ -44,6 +43,12 @@ export default function RandomGame({listOfPlayer}) {
         }
         setDice(!dice)
         setCount(count + 1)
+    }
+
+    function backListGame() {
+        sessionStorage.setItem('end-game', true)
+        setCount(0)
+        setRedirectTo(true)
     }
 
     function question() {
@@ -82,7 +87,7 @@ export default function RandomGame({listOfPlayer}) {
                 break;
         }
     }
-
+    /* eslint-disable */
     useEffect(() => {
         if (listOfPlayer.length >= 2) {
             randomPlayer()
@@ -93,6 +98,41 @@ export default function RandomGame({listOfPlayer}) {
 
     if (redirectTo) {
         return <Redirect to="/pre-game"/>;
+    }
+
+    const endGame = () => {
+        return <motion.div
+        initial={{
+        opacity: 0
+    }}
+        exit={{
+        opacity: 0
+    }}
+        animate={{
+        opacity: 1
+    }}
+        className="flex min-h-screen flex-col h-full sm:items-center sm:justify-center text-center bg-indigo-900">
+        <p className="phrase text-4xl max-w-screen-lg mb-9 text-white font-semibold">La partie est terminée.</p>
+        <p className="phrase text-3xl max-w-screen-lg mb-9 text-white font-semibold">Souhaitez-vous recommencer ?</p>
+        <motion.p
+            whileHover={{
+            scale: 1.1
+        }}
+            whileTap={{
+            scale: 0.9
+        }}
+            onClick={() => setCount(0) & setDice(!dice)}
+            className="phrase text-3xl max-w-screen-lg mb-9 bg-white p-6 rounded-xl cursor-pointer text-indigo-900 font-semibold">Relancer une partie</motion.p>
+            <motion.p
+            whileHover={{
+            scale: 1.1
+        }}
+            whileTap={{
+            scale: 0.9
+        }}
+            onClick={() => backListGame()}
+            className="phrase text-3xl max-w-screen-lg mb-9 bg-white p-6 rounded-xl cursor-pointer text-indigo-900 font-semibold">Retour aux modes de jeu</motion.p>
+    </motion.div>
     }
 
     const showQuestion = () => {
@@ -123,10 +163,11 @@ export default function RandomGame({listOfPlayer}) {
 
     return (
         <div
-            className="flex min-h-screen flex-col h-full items-center justify-center text-center bg-indigo-900">
+            className="flex min-h-screen flex-col h-full items-center justify-center text-center bg-indigo-900 overflow-y-none">
             {dice & count <= 25
                 ? showQuestion()
                 : ''}
+            {count > 25 ? endGame() : ''}
             {!dice & count <= 25
                 ? <motion.div
                         initial={{

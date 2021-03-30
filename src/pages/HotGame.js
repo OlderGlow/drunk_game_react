@@ -1,13 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react'
 
-class HotGame extends Component {
-    render() {
-        return (
-            <div>
-                Hot Game
-            </div>
-        );
-    }
+export default function HotGame({listOfPlayer}) {
+
+    return (
+        <div>
+            Bonjour
+        </div>
+    )
 }
-
-export default HotGame;

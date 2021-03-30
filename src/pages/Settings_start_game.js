@@ -12,10 +12,11 @@ function SettingsStartGame(props) {
         setEtat] = useState(false)
     const [card,
         setCard] = useState(1)
+
     function addPlayer() {
         if (player) {
             let _p = player.map(p => p.PlayerName)
-            sessionStorage.setItem('players', JSON.stringify(_p))
+            localStorage.setItem('players', JSON.stringify(_p))
         }
         setEtat(etat => !etat)
     }
@@ -28,7 +29,7 @@ function SettingsStartGame(props) {
             setCard(1)
         }
     }
-
+    
     useEffect(() => {
         if (sessionStorage.getItem('end-game')) {
             setEtat(true)
@@ -49,7 +50,6 @@ function SettingsStartGame(props) {
         }}
             onKeyDown={(event) => handleTap(event)}
             className="h-full bg-gradient-to-tr min-h-screen from-blue-400 to-indigo-800">
-
             <div className="flex h-auto items-center justify-center">
                 <div className="mt-6 sm:mt-20">
                     <img src={Drunk} alt="Logo" className="h-20 w-30"/>
@@ -76,7 +76,9 @@ function SettingsStartGame(props) {
                         </div>
                     : ''}
                 {etat
-                    ? <div className="flex justify-center items-center" onKeyDown={(event) => handleTap(event)}>
+                    ? <div
+                            className="flex justify-center items-center"
+                            onKeyDown={(event) => handleTap(event)}>
                             <Card setListOfPlayer={props.setlistOfPlayer} card={card} setCard={setCard}/>
                         </div>
                     : ''}

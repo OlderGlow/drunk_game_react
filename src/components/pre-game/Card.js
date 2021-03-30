@@ -91,7 +91,7 @@ function Card(props) {
                                 scale: 0.9
                             }}
                                 onClick={() => props.setCard(2)}
-                                className="next control-1 w-10 h-10 mr-4 md:mr-10 absolute cursor-pointer  text-3xl font-bold text-black rounded-full bg-white leading-tight text-center z-10 inset-y-0 right-0 my-auto shadow-xl">›</motion.label>
+                                className="next control-1 w-10 h-10 mr-4 md:mr-4 absolute cursor-pointer  text-3xl font-bold text-black rounded-full bg-white leading-tight text-center z-10 inset-y-0 right-0 my-auto shadow-xl">›</motion.label>
                         : ''}
 
                     {props.card === 1
@@ -127,7 +127,7 @@ function Card(props) {
                                 scale: 0.9
                             }}
                                 onClick={() => props.setCard(3)}
-                                className="next control-1 w-10 h-10 mr-4 md:mr-10 absolute cursor-pointer  text-3xl font-bold text-black rounded-full bg-white leading-tight text-center z-10 inset-y-0 right-0 my-auto shadow-xl">›</motion.label>
+                                className="next control-1 w-10 h-10 mr-4 md:mr-4 absolute cursor-pointer  text-3xl font-bold text-black rounded-full bg-white leading-tight text-center z-10 inset-y-0 right-0 my-auto shadow-xl">›</motion.label>
                         : ''}
 
                     {props.card === 3
@@ -151,7 +151,7 @@ function Card(props) {
                                 scale: 0.9
                             }}
                                 onClick={() => props.setCard(1)}
-                                className="next control-1 w-10 h-10 mr-4 md:mr-10 absolute cursor-pointer  text-3xl font-bold text-black rounded-full bg-white leading-tight text-center z-10 inset-y-0 right-0 my-auto shadow-xl">›</motion.label>
+                                className="next control-1 w-10 h-10 mr-4 md:mr-4 absolute cursor-pointer  text-3xl font-bold text-black rounded-full bg-white leading-tight text-center z-10 inset-y-0 right-0 my-auto shadow-xl">›</motion.label>
                         : ''}
 
                 </div>
