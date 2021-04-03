@@ -32,7 +32,10 @@ export const case2 =
             "Bois 2 gorgées et embrasse la main d'une personne au choix. #Covid",
             "Crie 2-NIS BROGNARD et distribue 2 gorgées #ah",
             "Bois 2 l'eau, ça te fera du bien",
-            "Si tu héberges la soirée, distribue 2 gorgées"
+            "Si tu héberges la soirée, distribue 2 gorgées",
+            "Tous les joueurs boivent 2 gorgées",
+            "Si tu aimes la Casa 2 Papel, bois 2 gorgées",
+            "Distribue 2+2 gorgées. 2 rien, c'est gratuit"
         ]        
 export const case3 = 
         [
@@ -49,7 +52,8 @@ export const case3 =
             "Donne 3 gorgées si tu es venu(e) à pied à la soirée",
             "Bois 3 gorgées si tu es venu(e) en voiture à la soirée",
             "Si tu aimes le 3 Rivières (Rhum), bois 3 gorgées",
-            "Cites 3 musiques de Tryo et distribue 3 gorgées"
+            "Cites 3 musiques de Tryo et distribue 3 gorgées",
+            "Tous les joueurs boivent 3 gorgées"
         ]
 
 export const case4 = 
@@ -64,7 +68,8 @@ export const case4 =
             "Bois 4 gorgées si ton nom de famille termine par une voyelle",
             "Bois 4 gorgées si tu n'es pas végétarien",
             "Bois 4 gorgées et embrasse le torse d'une personne au choix. #Covid",
-            "Donne 4 gorgées si tu aimes le 4-quart"
+            "Donne 4 gorgées si tu aimes le 4-quart",
+            "Tous les joueurs boivent 4 gorgées"
         ]
         
 export const case5 = 
@@ -79,6 +84,7 @@ export const case5 =
             "Bois 5 gorgées si ton nom de famille termine par une voyelle",
             "Donne 5 gorgées si tu connais une réplique d'un des film Harry Potter",
             "Bois 5 gorgées et embrasse sur la bouche une personne au choix. #Covid",
+            "Tous les joueurs boivent 5 gorgées"
         ]      
 
 export const case6 = 
@@ -93,4 +99,6 @@ export const case6 =
             "Bois 6 gorgées si ton nom de famille termine par une voyelle",
             "Donne 6 gorgées si tu as un compte TikTok",
             "Bois 6 gorgées et embrasse sur la bouche une personne au choix. #Covid",
+            "Tous les joueurs boivent 6 gorgées",
+            "Répète Six Saucisses aux Choux 6 fois sans te tromper. Si tu y arrives : distribue 6 gorgées"
         ]            
