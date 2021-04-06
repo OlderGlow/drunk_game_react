@@ -20,7 +20,8 @@ export default function HotGame({listOfPlayer}) {
     const [endGame,
         setEndGame] = useState(false)
 
-    let _q;
+    let _q = question()
+
     const players = listOfPlayer;
 
     const heart = () => {
@@ -84,7 +85,14 @@ export default function HotGame({listOfPlayer}) {
 
     function question() {
         let rnd = Math.floor(Math.random() * Math.floor(hotQuestion.length))
-        return hotQuestion[rnd]
+        if(_q === undefined){
+            return hotQuestion[rnd]
+        }
+        else {
+            let _i = hotQuestion.indexOf(_q)
+            hotQuestion.slice(_i, 1)
+            return hotQuestion[rnd]
+        }
     }
 
     const showQuestion = () => {
@@ -108,7 +116,7 @@ export default function HotGame({listOfPlayer}) {
                     {'\u00A0'}vies restantes
                 </p>
                 <p
-                    className="text-3xl lg:max-w-screen-lg mx-12 sm:mx-0 sm:mb-9 text-white font-semibold text-center">{_q = question()}</p>
+                    className="text-3xl lg:max-w-screen-lg mx-12 sm:mx-0 sm:mb-9 text-white font-semibold text-center">{_q.replace('r=p1', '').replace('r=g1','').replace('a=p1', '').replace('a=g1', '')}</p>
                 <div className="flex flex-row mx-auto mt-8">
                     <motion.p
                         whileHover={{
@@ -142,23 +150,31 @@ export default function HotGame({listOfPlayer}) {
     }
 
     function accepter(id) {
-        if (_q.includes('gagne')) {
-            addLife(id)
-        }
-        if(_q.includes('perdre', 'contre')){
-            addLife(id)
-        }
-        nextPlayer()
-    }
-
-    function refuser(id) {
-        if (_q.includes('perd')) {
+        if (_q.includes('a=p1')) {
             removeLife(id)
+        }
+        if (_q.includes('a=g1')) {
+            addLife(id)
         }
         if (life[id].Life === 0) {
             setEndGame(true)
         } else {
             nextPlayer()
+        }
+    }
+
+    function refuser(id) {
+        if (_q.includes('r=p1')) {
+            removeLife(id)
+        }
+        if (_q.includes('r=g1')) {
+            addLife(id)
+        }
+        if (life[id].Life === 0) {
+            setEndGame(true)
+        } else {
+            nextPlayer()
+            hotQuestion.slice(hotQuestion.indexOf(_q))
         }
     }
 
@@ -182,6 +198,7 @@ export default function HotGame({listOfPlayer}) {
             }
             setLife(life)
             randomPlayer()
+            _q = question()
             setEndGame(false)
         }
     }
@@ -194,6 +211,7 @@ export default function HotGame({listOfPlayer}) {
                 }
                 setLife(life)
                 randomPlayer()
+                _q = question()
             }
         } else {
             setRedirectTo(true)

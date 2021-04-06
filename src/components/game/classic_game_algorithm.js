@@ -64,7 +64,7 @@ export function randomGorgees(Title) {
 export function randomPhrase(Title, Player) {
     let div = document.getElementById('divgame')
     switch (Title) {
-        default:
+        default: 
             div.className = "h-full bg-gradient-to-br from-yellow-400 to-red-800"
             return "Pas encore implanté";
         case 'Cul sec':
