@@ -10,8 +10,7 @@ function SettingsStartGame(props) {
         setPlayer] = useState([])
     const [etat,
         setEtat] = useState(false)
-    const [card,
-        setCard] = useState(1)
+        
     function addPlayer() {
         if (player) {
             let _p = player.map(p => p.PlayerName)
@@ -20,16 +19,6 @@ function SettingsStartGame(props) {
         setEtat(etat => !etat)
     }
 
-    
-
-    const handleTap = (event) => {
-        if (card === 1 & event.key === 'ArrowRight') {
-            setCard(2)
-        }
-        if (card === 2 & event.key === 'ArrowLeft') {
-            setCard(1)
-        }
-    }
     
     useEffect(() => {
         if (sessionStorage.getItem('end-game')) {
@@ -49,7 +38,7 @@ function SettingsStartGame(props) {
             animate={{
             opacity: 1
         }}
-            onKeyDown={(event) => handleTap(event)}
+            
             className="h-full bg-gradient-to-tr min-h-screen from-blue-400 to-indigo-800">
             <div className="flex h-auto items-center justify-center">
                 <div className="mt-6 sm:mt-20">
@@ -59,7 +48,7 @@ function SettingsStartGame(props) {
 
             <div
                 className="max-w-xs sm:max-w-sm lg:max-w-lg md:max-w-md xl:max-w-xl w-full mx-auto h-auto mt-16"
-                onKeyDown={(event) => handleTap(event)}>
+                >
                 {!etat
                     ? <div className="flex flex-col items-center">
                             <div
@@ -78,9 +67,9 @@ function SettingsStartGame(props) {
                     : ''}
                 {etat
                     ? <div
-                            className="flex justify-center items-center"
-                            onKeyDown={(event) => handleTap(event)}>
-                            <Card setListOfPlayer={props.setlistOfPlayer} card={card} setCard={setCard}/>
+                            className="flex w-max justify-center items-center"
+                            >
+                            <Card listOfPlayer={props.listOfPlayer} setListOfPlayer={props.setlistOfPlayer} />
                         </div>
                     : ''}
             </div>
@@ -95,7 +84,7 @@ function SettingsStartGame(props) {
                             whileTap={{
                             scale: 0.9
                         }}
-                            className="p-4 text-2xl bg-white text-blue-600 rounded-xl font-semibold">
+                            className="p-4 mb-8 text-2xl bg-white text-blue-600 rounded-xl font-semibold">
                             {!etat
                                 ? "Sélectionner un mode de jeu"
                                 : <span>

@@ -31,7 +31,7 @@ export default function RandomGame({listOfPlayer}) {
 
     function afterRolling(value) {
         setValue(value)
-        setTimeout(() => setDice(true), 800)
+        setTimeout(() => setDice(true), 400)
     }
 
     function nextPlayer() {

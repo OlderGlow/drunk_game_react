@@ -1,6 +1,5 @@
 import './App.css';
 import {Route, Switch} from 'react-router-dom'
-import Home from "./pages/Home";
 import SettingsStartGame from "./pages/Settings_start_game";
 import {AnimatePresence} from "framer-motion";
 import ClassicGame from "./pages/ClassicGame";
@@ -28,12 +27,11 @@ export default function App() {
         <div className="app">
             <AnimatePresence>
                 <Switch>
-                    <Route path={'/'} component={Home} exact/>
                     <Route
-                        path={'/pre-game'}
+                        path={'/'}
                         component={() => <SettingsStartGame
                         listOfPlayer={listOfPlayer}
-                        setlistOfPlayer={setlistOfPlayer}/>}/>
+                        setlistOfPlayer={setlistOfPlayer}/>} exact/>
                     <Route
                         path={'/classic-game'}
                         component={() => <ClassicGame listOfPlayer={listOfPlayer}/>}/>
