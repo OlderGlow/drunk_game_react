@@ -10,7 +10,7 @@ function SettingsStartGame(props) {
         setPlayer] = useState([])
     const [etat,
         setEtat] = useState(false)
-        
+
     function addPlayer() {
         if (player) {
             let _p = player.map(p => p.PlayerName)
@@ -19,7 +19,6 @@ function SettingsStartGame(props) {
         setEtat(etat => !etat)
     }
 
-    
     useEffect(() => {
         if (sessionStorage.getItem('end-game')) {
             setEtat(true)
@@ -38,25 +37,23 @@ function SettingsStartGame(props) {
             animate={{
             opacity: 1
         }}
-            
             className="h-full bg-gradient-to-tr min-h-screen from-red-400 to-red-700">
             <div className="flex h-auto items-center justify-center">
-                <div className="mt-6 sm:mt-20">
-                    <img src={Drunk} alt="Logo" className="h-1/2 w-40"/>
+                <div className="mt-6 sm:mt-5">
+                    <img src={Drunk} alt="Logo" className="h-1/2 w-60"/>
                 </div>
             </div>
 
             <div
-                className="max-w-xs sm:max-w-sm lg:max-w-lg md:max-w-md xl:max-w-xl w-full mx-auto h-auto mt-16"
-                >
+                className="w-full h-auto mt-16">
                 {!etat
-                    ? <div className="flex flex-col items-center">
+                    ? <div className="flex flex-col mx-auto items-center justify-center">
                             <div
                                 className="mx-auto"
                                 style={{
                                 width: "fit-content"
                             }}>
-                                <p className="text-2xl sm:text-3xl mb-24 text-white font-black text-center">Ajoutez des joueurs pour démarrer</p>
+                                <p className="text-2xl sm:text-3xl mb-24 text-white font-semibold text-center">Ajoutez des joueurs pour commencer</p>
                                 <Input
                                     player={player}
                                     setPlayer={setPlayer}
@@ -66,15 +63,14 @@ function SettingsStartGame(props) {
                         </div>
                     : ''}
                 {etat
-                    ? <div
-                            className="flex w-max justify-center items-center"
-                            >
-                            <Card listOfPlayer={props.listOfPlayer} setListOfPlayer={props.setlistOfPlayer} />
-                        </div>
+                    ? <Card
+                            listOfPlayer={props.listOfPlayer}
+                            setListOfPlayer={props.setlistOfPlayer}/>
+
                     : ''}
             </div>
             <div
-                className="flex flex-row max-w-xs sm:max-w-sm lg:max-w-lg md:max-w-md xl:max-w-xl w-full mx-auto mt-7 mb-3 justify-center">
+                className="flex flex-row w-full mx-auto mt-7 mb-3 justify-center">
                 {player.length >= 2
                     ? <motion.button
                             onClick={() => addPlayer()}

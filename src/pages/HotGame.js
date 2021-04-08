@@ -60,14 +60,14 @@ export default function HotGame({listOfPlayer}) {
                 {finalQuestion[Math.floor(Math.random() * Math.floor(finalQuestion.length))]}
             </p>
             <motion.button
-                        onClick={() => restartGame()}
-                        whileHover={{
-                        scale: 1.1
-                    }}
-                        whileTap={{
-                        scale: 0.9
-                    }}
-                        className="text-3xl mx-6 bg-white p-6 text-pink-600 rounded-xl font-semibold mt-10">Rejouer une partie</motion.button>
+                onClick={() => restartGame()}
+                whileHover={{
+                scale: 1.1
+            }}
+                whileTap={{
+                scale: 0.9
+            }}
+                className="text-3xl mx-6 bg-white p-6 text-pink-600 rounded-xl font-semibold mt-10">Rejouer une partie</motion.button>
         </motion.div>
     }
 
@@ -85,20 +85,14 @@ export default function HotGame({listOfPlayer}) {
 
     function question() {
         let rnd = Math.floor(Math.random() * Math.floor(hotQuestion.length))
-        if(_q === undefined){
-            return hotQuestion[rnd]
-        }
-        else {
-            let _i = hotQuestion.indexOf(_q)
-            hotQuestion.slice(_i, 1)
-            return hotQuestion[rnd]
-        }
+        return hotQuestion[rnd]
+
     }
 
     const showQuestion = () => {
         if (!endGame) {
             return <motion.div
-            initial={{
+                initial={{
                 opacity: 0
             }}
                 exit={{
@@ -116,7 +110,11 @@ export default function HotGame({listOfPlayer}) {
                     {'\u00A0'}vies restantes
                 </p>
                 <p
-                    className="text-3xl lg:max-w-screen-lg mx-12 sm:mx-0 sm:mb-9 text-white font-semibold text-center">{_q.replace('r=p1', '').replace('r=g1','').replace('a=p1', '').replace('a=g1', '')}</p>
+                    className="text-3xl lg:max-w-screen-lg mx-12 sm:mx-0 sm:mb-9 text-white font-semibold text-center">{_q
+                        .replace('r=p1', '')
+                        .replace('r=g1', '')
+                        .replace('a=p1', '')
+                        .replace('a=g1', '')}</p>
                 <div className="flex flex-row mx-auto mt-8">
                     <motion.p
                         whileHover={{
@@ -188,7 +186,7 @@ export default function HotGame({listOfPlayer}) {
         setCount(count + 1)
     }
 
-    function restartGame(){
+    function restartGame() {
         let life = []
         setLife(life)
         setCount(0)

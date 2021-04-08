@@ -14,13 +14,12 @@ function Card(props) {
     }
 
     const selectcard = (id, title, img, description, background, link) => {
-        console.log(props.listOfPlayer)
-        return <motion.div >
+        return <motion.div>
             <Link to={link}>
                 <motion.button
                                     
                                     whileHover={{
-                                        scale: 1.1
+                                        scale: 1.02,
                                     }}
                                         whileTap={{
                                         scale: 0.9
@@ -67,7 +66,7 @@ function Card(props) {
             opacity: 1
         }}
         
-            className="flex flex-col max-w-xs sm:max-w-sm xl:max-w-xl 2xl:max-w-2xl">
+            className="flex flex-col max-w-xs mx-auto sm:max-w-sm xl:max-w-xl 2xl:max-w-2xl">
             <div className="carousel bg-transparent relative">
                 <div className="carousel-inner relative overflow-hidden w-full sm:grid sm:grid-cols-3">
                     {selectcard(1, 'Classik Drunk', Beer, "Un mode de jeu simple mais efficace. Affrontez-vous dans une partie aux règles m" +
