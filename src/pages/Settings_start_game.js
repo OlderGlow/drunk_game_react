@@ -20,7 +20,6 @@ function SettingsStartGame(props) {
     }
 
     useEffect(() => {
-        console.log(sessionStorage.getItem('end-game'))
         if (sessionStorage.getItem('end-game')) {
             setEtat(true)
         }
@@ -46,7 +45,7 @@ function SettingsStartGame(props) {
             </div>
 
             <div
-                className="w-full h-auto mt-16">
+                className="w-full h-auto mt-8">
                 {!etat
                     ? <div className="flex flex-col mx-auto items-center justify-center">
                             <div
@@ -54,7 +53,7 @@ function SettingsStartGame(props) {
                                 style={{
                                 width: "fit-content"
                             }}>
-                                <p className="text-2xl sm:text-3xl mb-24 text-white font-semibold text-center">Ajoutez des joueurs pour commencer</p>
+                                <p className="text-xl sm:text-3xl mb-24 text-white font-bold sm:font-semibold text-center">Ajoutez des joueurs pour commencer</p>
                                 <Input
                                     player={player}
                                     setPlayer={setPlayer}
