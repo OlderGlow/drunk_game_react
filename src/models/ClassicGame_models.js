@@ -35,14 +35,13 @@ export const hasard =
         [
             'j1 : quelle est la superficie en km² du Japon ? (~40.000km)',
             "j1 : vrai ou faux ? Cyprien possède plus de 14 millions d'abonnés sur Youtube", 
-            "j1 : vrai ou faux ? La Tour Eiffel a été construite au 17e siècle", 
+            "j1 : vrai ou faux ? La Tour Eiffel a été construite au 17e siècle",
             "j1 : Squeezie possède plus ou moins de 500 000 auditeurs/mois sur Spotify ?",
             "j1 : que signifie le mot Ophidiophobie ?",
             "j1 : Quel pays a remporté la coupe du monde de football en 2014 ?",
             "j1 : vrai ou faux ? McFly et Carlito détiennent le record français du nombre de viewer sur Twitch",
             "j1 : vrai ou faux ? La personne ayant le plus d'abonnés sur Instagram est Christiano Ronaldo",
             "j1 : vrai ou faux ? Le premier iPhone est sorti en 2007"
-
         ]
 export const donneur = 
         [

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {motion} from "framer-motion";
 import Input from "../components/pre-game/Input";
-import Drunk from '../images/logo.png'
+import Drunk from '../images/logo 2.png'
 import Card from "../components/pre-game/Card";
 
 function SettingsStartGame(props) {
@@ -39,10 +39,10 @@ function SettingsStartGame(props) {
             opacity: 1
         }}
             
-            className="h-full bg-gradient-to-tr min-h-screen from-blue-400 to-indigo-800">
+            className="h-full bg-gradient-to-tr min-h-screen from-red-400 to-red-700">
             <div className="flex h-auto items-center justify-center">
                 <div className="mt-6 sm:mt-20">
-                    <img src={Drunk} alt="Logo" className="h-20 w-30"/>
+                    <img src={Drunk} alt="Logo" className="h-1/2 w-40"/>
                 </div>
             </div>
 
@@ -84,7 +84,7 @@ function SettingsStartGame(props) {
                             whileTap={{
                             scale: 0.9
                         }}
-                            className="p-4 mb-8 text-2xl bg-white text-blue-600 rounded-xl font-semibold">
+                            className="p-4 mb-8 text-2xl bg-white text-red-600 rounded-xl font-semibold">
                             {!etat
                                 ? "Sélectionner un mode de jeu"
                                 : <span>
