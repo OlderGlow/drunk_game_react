@@ -97,12 +97,12 @@ function ClassicGame({listOfPlayer}) {
                             className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-400"></motion.div>
                     </div>
                 </div>
-                <div className="grid grid-cols-2 w-1/3">
+                <div className="grid grid-cols-2 w-5/6 mt-10 justify-center mx-auto sm:w-1/3">
                     {Count > NbTour
                         ? <motion.button
-                                className="text-3xl text-center mr-3 bg-white rounded-xl p-3 font-semibold text-gray-600"
+                                className="text-xl text-center mr-3 bg-white rounded-xl p-2 font-semibold text-gray-600"
                                 whileHover={{
-                                scale: 1.1
+                                scale: 1.05
                             }}
                                 whileTap={{
                                 scale: 0.9
@@ -111,9 +111,9 @@ function ClassicGame({listOfPlayer}) {
                         : ''}
                     {Count > NbTour
                         ? <motion.button
-                                className="text-3xl text-center bg-white rounded-xl p-3 font-semibold text-gray-600"
+                                className="text-xl text-center bg-white rounded-xl p-2 font-semibold text-gray-600"
                                 whileHover={{
-                                scale: 1.1
+                                scale: 1.05
                             }}
                                 whileTap={{
                                 scale: 0.9
