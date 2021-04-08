@@ -3,6 +3,9 @@
   "version": "0.8.1",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "^2.4.7",
+    "@capacitor/core": "^2.4.7",
+    "@capacitor/ios": "^2.4.7",
     "@craco/craco": "^6.1.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -43,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "@capacitor/cli": "2.4.7",
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "autoprefixer": "^9.8.6",
     "postcss": "^7.0.35",

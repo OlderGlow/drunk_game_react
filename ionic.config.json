@@ -1,0 +1,7 @@
+{
+    "name": "Drunk",
+    "integrations": {
+      "capacitor": {}
+    },
+    "type": "react"
+  }

@@ -1,0 +1,8 @@
+{
+    "appId": "io.ionic.drunk",
+    "appName": "drunk",
+    "bundledWebRuntime": false,
+    "npmClient": "npm",
+    "webDir": "build",
+    "cordova": {}
+  }
