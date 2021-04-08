@@ -169,11 +169,11 @@ export default function RandomGame({listOfPlayer}) {
     return (
         <div
             className="flex min-h-screen flex-col h-full items-center justify-center text-center bg-indigo-900 overflow-y-none">
-            {dice & count <= 3
+            {dice & count <= 25
                 ? showQuestion()
                 : ''}
-            {count > 3 ? endGame() : ''}
-            {!dice & count <= 3
+            {count > 25 ? endGame() : ''}
+            {!dice & count <= 25
                 ? <motion.div
                         initial={{
                         opacity: 0
