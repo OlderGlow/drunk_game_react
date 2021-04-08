@@ -253,7 +253,7 @@ export default function HotGame({listOfPlayer}) {
     }
 
     if (redirectTo) {
-        return <Redirect to="/pre-game"/>;
+        return <Redirect to="/"/>;
     }
 
     return (

@@ -54,7 +54,7 @@ function ClassicGame({listOfPlayer}) {
     }, [Title, Player])
 
     if (redirectTo) {
-        return <Redirect to="/pre-game"/>;
+        return <Redirect to="/"/>;
     }
 
     return (

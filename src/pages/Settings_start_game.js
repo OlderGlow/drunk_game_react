@@ -20,6 +20,7 @@ function SettingsStartGame(props) {
     }
 
     useEffect(() => {
+        console.log(sessionStorage.getItem('end-game'))
         if (sessionStorage.getItem('end-game')) {
             setEtat(true)
         }

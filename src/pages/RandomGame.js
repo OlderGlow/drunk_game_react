@@ -31,7 +31,7 @@ export default function RandomGame({listOfPlayer}) {
 
     function afterRolling(value) {
         setValue(value)
-        setTimeout(() => setDice(true), 400)
+        setTimeout(() => setDice(true), 300)
     }
 
     function nextPlayer() {
@@ -97,7 +97,7 @@ export default function RandomGame({listOfPlayer}) {
     }, [])
 
     if (redirectTo) {
-        return <Redirect to="/pre-game"/>;
+        return <Redirect to="/"/>;
     }
 
     const endGame = () => {
@@ -114,24 +114,29 @@ export default function RandomGame({listOfPlayer}) {
         className="flex min-h-screen flex-col h-full sm:items-center sm:justify-center text-center bg-indigo-900">
         <p className="phrase text-4xl max-w-screen-lg mb-9 text-white font-semibold">La partie est terminée.</p>
         <p className="phrase text-3xl max-w-screen-lg mb-9 text-white font-semibold">Souhaitez-vous recommencer ?</p>
-        <motion.p
-            whileHover={{
-            scale: 1.1
-        }}
-            whileTap={{
-            scale: 0.9
-        }}
-            onClick={() => setCount(0) & setDice(!dice)}
-            className="phrase text-3xl max-w-screen-lg mb-9 bg-white p-6 rounded-xl cursor-pointer text-indigo-900 font-semibold">Relancer une partie</motion.p>
-            <motion.p
-            whileHover={{
-            scale: 1.1
-        }}
-            whileTap={{
-            scale: 0.9
-        }}
-            onClick={() => backListGame()}
-            className="phrase text-3xl max-w-screen-lg mb-9 bg-white p-6 rounded-xl cursor-pointer text-indigo-900 font-semibold">Retour aux modes de jeu</motion.p>
+        <div className="grid grid-cols-2 w-5/6 mt-10 justify-center mx-auto sm:w-full">
+<motion.button
+                                className="text-xl sm:text-2xl text-center mr-3 bg-white rounded-xl p-2 sm:p-4 font-semibold text-gray-600"
+                                whileHover={{
+                                scale: 1.05
+                            }}
+                                whileTap={{
+                                scale: 0.9
+                            }}
+                                onClick={() => setCount(0)}>Relancer une partie</motion.button>
+                       
+
+                         <motion.button
+                                className="text-xl sm:text-2xl text-center bg-white rounded-xl p-2 sm:p-4 font-semibold text-gray-600"
+                                whileHover={{
+                                scale: 1.05
+                            }}
+                                whileTap={{
+                                scale: 0.9
+                            }}
+                                onClick={() => backListGame()}>Retour aux modes de jeu</motion.button>
+                                </div>
+
     </motion.div>
     }
 
@@ -147,7 +152,7 @@ export default function RandomGame({listOfPlayer}) {
             opacity: 1
         }}
             className="flex min-h-screen flex-col h-full sm:items-center sm:justify-center text-center bg-indigo-900">
-            <p className="phrase text-4xl max-w-screen-lg mb-9 text-white font-semibold">{player}</p>
+            <p className="phrase underline text-4xl max-w-screen-lg mb-9 text-white font-semibold">{player}</p>
             <p className="phrase text-3xl max-w-screen-lg mb-9 text-white font-semibold">{question()}</p>
             <motion.p
                 whileHover={{
@@ -164,11 +169,11 @@ export default function RandomGame({listOfPlayer}) {
     return (
         <div
             className="flex min-h-screen flex-col h-full items-center justify-center text-center bg-indigo-900 overflow-y-none">
-            {dice & count <= 25
+            {dice & count <= 3
                 ? showQuestion()
                 : ''}
-            {count > 25 ? endGame() : ''}
-            {!dice & count <= 25
+            {count > 3 ? endGame() : ''}
+            {!dice & count <= 3
                 ? <motion.div
                         initial={{
                         opacity: 0
