@@ -56,7 +56,7 @@ function SettingsStartGame(props) {
                                 style={{
                                 width: "fit-content"
                             }}>
-                                <p className="text-2xl sm:text-3xl mb-24 text-white font-semibold text-center">Ajoutez des joueurs pour démarrer</p>
+                                <p className="text-2xl sm:text-3xl mb-24 text-white font-black text-center">Ajoutez des joueurs pour démarrer</p>
                                 <Input
                                     player={player}
                                     setPlayer={setPlayer}
