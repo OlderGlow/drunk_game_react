@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">drunk</string>
-    <string name="title_activity_main">drunk</string>
+    <string name="app_name">Drunk</string>
+    <string name="title_activity_main">Drunk</string>
     <string name="package_name">io.ionic.drunk</string>
     <string name="custom_url_scheme">io.ionic.drunk</string>
 </resources>

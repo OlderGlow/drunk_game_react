@@ -1,6 +1,6 @@
 {
     "appId": "io.ionic.drunk",
-    "appName": "drunk",
+    "appName": "Drunk",
     "bundledWebRuntime": false,
     "npmClient": "npm",
     "webDir": "build",
