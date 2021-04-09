@@ -2,7 +2,7 @@ export const hotQuestion =
         [            
             "Raconte le dernier rêve érotique que tu aies fait. En cas de refus, tu perds 1 vie et tu bois 3 gorgées r=p1",
             "Donne 3 gorgées et enlève un vêtement. Si tu refuses, tu perds une vie et tu bois 3 gorgées r=p1",
-            "Plutôt faire l'amour la lumière alumée ou éteinte ? Accepte de répondre pour donner 2 gorgées",
+            "Plutôt faire l'amour la lumière allumée ou éteinte ? Accepte de répondre pour donner 2 gorgées",
             "Bois 7 gorgées et gagne une vie a=g1",
             "Donne 8 gorgées et perds une vie a=p1",
             "Si tu embrasse la personne à ta gauche, tu peux gagner une vie et donner 3 gorgées a=g1",
