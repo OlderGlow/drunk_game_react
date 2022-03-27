@@ -5,7 +5,10 @@ export const question_cul_sec_groupe =
             "Le premier à crier Stalline donne un cul sec à son voisin de droite",
             "Si ton prénom termine par une consonne : CUL SEC", 
             "Le dernier arrivé à la soirée prendra un cul sec", 
-            "Les non-fumeurs distribuent un cul sec à une seule personne"
+            "Les non-fumeurs distribuent un cul sec à une seule personne",
+            "Ceux ayant le permis de conduire sont obligés de donner un cul sec",
+            "Ceux qui ne sont pas inscrits sur les listes électorales sont obligés de prendre un cul sec",
+            "Tous ceux ayant un téléphone Androïd boivent cul sec"
         ]
 export const question_cul_sec_solo = 
         [
@@ -55,7 +58,9 @@ export const prenneur =
         [
     "j1 : si tu as des sneakers, bois 5 gorgées", "j1 : bois 4 gorgées, comme ça, gratuitement.", 
     "j1 : joue à Shifumi avec la personne à ta droite. Le perdant prend 4 gorgées", 
-    "j1 : si l'alcool que tu bois est < à 37,5% tu bois 6 gorgées. Sinon tu en bois 3"
+    "j1 : si l'alcool que tu bois est < à 37,5% tu bois 6 gorgées. Sinon tu en bois 3",
+    "j1 : si tu as un iPhone, bois 5 gorgées. Sinon, tu les donnes à la personne à ta droite",
+    "j1 : tu es magnifique. Malgré ta beauté, tu bois 2 gorgées"
         ]
 export const duel = 
     [
