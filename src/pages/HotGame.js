@@ -68,6 +68,15 @@ export default function HotGame({listOfPlayer}) {
                 scale: 0.9
             }}
                 className="text-3xl mx-6 bg-white p-6 text-pink-600 rounded-xl font-semibold mt-10">Rejouer une partie</motion.button>
+            <motion.button
+                className="text-xl text-center bg-white rounded-xl p-2 font-semibold text-gray-600 mt-5"
+                whileHover={{
+                scale: 1.05
+            }}
+                whileTap={{
+                scale: 0.9
+            }}
+                onClick={() => backListGame()}>Retour aux modes de jeu</motion.button>
         </motion.div>
     }
 
@@ -89,6 +98,11 @@ export default function HotGame({listOfPlayer}) {
 
     }
 
+    function backListGame() {
+        sessionStorage.setItem('end-game', true)
+        restartGame(setCount(0))
+        setRedirectTo(true)
+    }
     const showQuestion = () => {
         if (!endGame) {
             return <motion.div

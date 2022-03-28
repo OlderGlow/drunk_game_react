@@ -111,7 +111,7 @@ export default function RandomGame({listOfPlayer}) {
         animate={{
         opacity: 1
     }}
-        className="flex min-h-screen flex-col h-full sm:items-center sm:justify-center text-center bg-indigo-900">
+        className="flex min-h-screen flex-col h-full items-center justify-center text-center bg-indigo-900">
         <p className="phrase text-4xl max-w-screen-lg mb-9 text-white font-semibold">La partie est terminée.</p>
         <p className="phrase text-3xl max-w-screen-lg mb-9 text-white font-semibold">Souhaitez-vous recommencer ?</p>
         <div className="grid grid-cols-2 w-5/6 mt-10 justify-center mx-auto sm:w-full">
@@ -151,7 +151,7 @@ export default function RandomGame({listOfPlayer}) {
             animate={{
             opacity: 1
         }}
-            className="flex min-h-screen flex-col h-full sm:items-center sm:justify-center text-center bg-indigo-900">
+            className="flex min-h-screen flex-col h-full items-center justify-center text-center bg-indigo-900">
             <p className="phrase underline text-4xl max-w-screen-lg mb-9 text-white font-semibold">{player}</p>
             <p className="phrase text-3xl max-w-screen-lg mb-9 text-white font-semibold">{question()}</p>
             <motion.p
