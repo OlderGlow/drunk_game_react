@@ -12,20 +12,20 @@ import {
     hasard
 } from '../../models/ClassicGame_models'
 
-var arrayProb = [6, 6, 6, 6, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 7, 7, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+var arrayProb = [6, 6, 6, 6, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 7, 7, 7, 7, 7, 7, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+console.log(arrayProb)
 let newHasard = hasard.slice();
 let newDonneur = donneur.slice();
 let newCulSec = question_cul_sec_solo.slice()
 let newPrenneur = prenneur.slice();
-let newDuel = duel.slice();
 let newDuo = duo.slice();
 let newJeuEquipe = jeuEquipe.slice();
 let newCulSecGroupe = question_cul_sec_groupe.slice();
 
 export function randomMode() {
-    var arrayNum = Math.floor(Math.random() * (arrayProb.length));
-    var arrayGameNumber = arrayProb[arrayNum];
-    var pickModeGame = mode_name[arrayGameNumber]
+    const arrayNum = Math.floor(Math.random() * (arrayProb.length))
+    const arrayGameNumber = arrayProb[arrayNum]
+    const pickModeGame = mode_name[arrayGameNumber]
     return pickModeGame;
 }
 
@@ -84,9 +84,6 @@ export function randomPhrase(Title, Player) {
         case 'Preneur':
             div.className = "h-full bg-gradient-to-br from-pink-400 to-pink-800"
             return switchPhrase(Player, 2, newPrenneur, prenneur);
-        case 'Duel':
-            div.className = "h-full bg-gradient-to-br from-gray-400 to-purple-800"
-            return switchPhrase(Player, 3, newDuel, duel);
         case 'Duo':
             div.className = "h-full bg-gradient-to-br from-gray-300 to-gray-700"
             return switchPhrase(Player, 4, newDuo, duo);

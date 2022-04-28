@@ -1,4 +1,4 @@
-export const mode_name = ["Hasard","Donneur","Preneur","Duo","Duel","Jeu d'équipe","Cul sec", "Cul sec - Groupe"]
+export const mode_name = ["Hasard","Donneur","Preneur","Duo","Jeu d'équipe","Cul sec", "Cul sec - Groupe"]
 
 export const question_cul_sec_groupe = 
         [
@@ -53,6 +53,12 @@ export const donneur =
             "j1 donne 3 gorgées à l'hôte de la soirée. Si j2 est l'hôte, tu peux te venger et distribuer 5 gorgées.",
             "j1 donne 2 gorgées à j2",
             "j1 peut donner 4 gorgées mais doit en boire 3",
+          "j1 : si tu connais l'âge de j2, tu peux lui donner 2 gorgées",
+          "j1 : si tu n'as pas les cheveux longs, tu donnes 3 gorgées à j2",
+          "j1 : si tu as déjà uriner durant la soirée, tu donnes 2 gorgées à j2",
+          "j1 : si tu as déjà uriner dans une piscine, tu donnes 2 gorgées à j2",
+          "j1 : si tu n'es pas radin, tu donnes 3 gorgées à j2",
+          "j1 : si tu t'es déjà masturbé dans un salon, tu donnes 2 gorgées à j2",
         ]
 export const prenneur =
         [
@@ -60,17 +66,30 @@ export const prenneur =
     "j1 : joue à Shifumi avec la personne à ta droite. Le perdant prend 4 gorgées", 
     "j1 : si l'alcool que tu bois est < à 37,5% tu bois 6 gorgées. Sinon tu en bois 3",
     "j1 : si tu as un iPhone, bois 5 gorgées. Sinon, tu les donnes à la personne à ta droite",
-    "j1 : tu es magnifique. Malgré ta beauté, tu bois 2 gorgées"
+    "j1 : tu es magnifique. Malgré ta beauté, tu bois 2 gorgées",
+          "j1 : si tu viens du Nord... pas de chance, bois 4 gorgées",
+          "j1 : si tu portes un jogging, bois 3 gorgées",
+          "j1 : si tu portes une robe, bois 2 gorgées",
+          "j1 : si tu portes des lunettes, bois 1 gorgées",
+          "j1 : si tu as un paquet de mouchoir sur toi, bois 2 gorgées",
+          "j1 : si tu fumes, bois 3 gorgées",
+          "j1 : si tu vapotes, bois 2 gorgées",
+          "j1 : si tu es venu à la soirée en voiture, bois 3 gorgées",
+          "j1 : si tu as déjà posté sur les réseaux en étant saoul, bois 2 gorgées",
+          "j1 : si tu as de la barbe, bois 3 gorgées",
         ]
-export const duel = 
-    [
-        'j1 : tu dois défier la personne à ta gauche au bras de fer chinois. 4 gorgées pour le perdant'
-    ]
 export const duo = 
     ['j1 et j2 : jouez à pile ou face avec deux personnes. Le duo gagnant peut distribuer 6 gorgées',
     "j1 et j2 choisissent la prochaine musique et peuvent distribuer 5 gorgées",
     "Si j1 et j2 se connaissaient avant la soirée, ils peuvent donner 6 gorgées. Sinon, ils trinquent et boivent 6 gorgées",
     "j1 et j2 doivent poster une story Snapchat ou Instagram et distribuer 4 gorgées",
+      "Si j1 et j2 boivent 3 gorgées, ils peuvent distribuer 6 gorgées à un joueur au choix",
+      "j1 et j2 se font un câlin et prennent 2 gorgées",
+      "Si j1 et j2 ont les mêmes goûts musicaux, ils peuvent distribuer 3 gorgées. Sinon ils les prennent.",
+      "Si j1 et j2 boivent le même alcool, ils peuvent distribuer 4 gorgées. Sinon, ils boivent 1 chacun",
+      "Si j1 et j2 ont le même sexe, ils peuvent distribuer 2 gorgées. Sinon, ils boivent 1 chacun",
+      "Si j1 et j2 ont le même style vestimentaire, ils peuvent distribuer 3 gorgées. Sinon, ils boivent 2 chacun",
+      "j1 et j2 doivent faire 10 pompes et distribuer 5 gorgées. En cas d'échec, ils les boivent",
     ]
 export const jeuEquipe = 
     [
